@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="checkbox">
+        <span class="slider" id="slider" onclick="switchModes()"></span>
+    </label>
+    <div class="container">
+        <input type="text" id="screen" disabled></input>
+        <div class="calculator-container" id="calculator-container">
+            <section class="section section1">
+                <button onclick="showValues('+')">+</button>
+                <button onclick="showValues('1')">1</button>
+                <button onclick="showValues('2')">2</button>
+                <button onclick="showValues('3')">3</button>
+            </section>   
+            <section class="section section2">
+                <button onclick="showValues('*')">*</button>
+                <button onclick="showValues('4')">4</button>
+                <button onclick="showValues('5')">5</button>
+                <button onclick="showValues('6')">6</button>
+            </section>   
+            <section class="section section3">
+                <button onclick="showValues('/')">÷</button>
+                <button onclick="showValues('7')">7</button>
+                <button onclick="showValues('8')">8</button>
+                <button onclick="showValues('9')">9</button>
+            </section>   
+            <section class="section section4">
+                <button onclick="showValues('-')">-</button>
+                <button onclick="showValues('0')">0</button>
+                <button onclick="showValues('.')">.</button>
+                <button onclick="calculate()" id="equals">=</button>
+            </section>
+            <section class="section section5">
+                <button onclick="clearAll()"class="c-button" >c</button>
+            </section>
+        </div> 
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
